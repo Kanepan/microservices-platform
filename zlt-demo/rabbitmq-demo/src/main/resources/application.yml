@@ -13,7 +13,7 @@ spring:
   cloud:
     stream:
       binders:
-        rabbit1:
+        output:
           type: rabbit
           environment:
             spring:
@@ -23,7 +23,7 @@ spring:
                 username: guest
                 password: guest
                 virtual-host: GHost
-        rabbit:
+        input:
           type: rabbit
           defaultCandidate: false
           environment:
@@ -35,9 +35,13 @@ spring:
                 password: guest
                 virtual-host: /
       bindings:
-        order:
+        output:
           binder: rabbit
           destination: order
           producer:
             autoStartup: true
-
+        input:
+          binder: rabbit
+          destination: order
+          producer:
+            autoStartup: true
