@@ -17,8 +17,9 @@ import java.io.Serializable;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 public class Order implements Serializable {
-	private static final long serialVersionUID = 2801814838883246461L;
+	private static final long serialVersionUID = 2801814838883246462L;
 
 	private Long orderId;
 	private String orderNo;
+	private String memo;
 }

@@ -34,15 +34,15 @@ public class RocketMqProduceApplication {
 
         @Override
         public void run(String... args) {
-            int count = 5;
-            for (int index = 1; index <= count; index++) {
-                String msgContent = "msg-" + index;
-                if (index % 2 == 0) {
-                    senderService.send(msgContent);
-                } else {
-                    senderService.sendWithTags(new Order((long)index, "order-"+index), "tagObj");
-                }
-            }
+//            int count = 5;
+//            for (int index = 1; index <= count; index++) {
+//                String msgContent = "msg-" + index;
+//                if (index % 2 == 0) {
+//                    senderService.send(msgContent);
+//                } else {
+//                    senderService.sendWithTags(new Order((long)index, "order-"+index), "tagObj");
+//                }
+//            }
         }
     }
 }

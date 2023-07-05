@@ -12,13 +12,13 @@ import org.springframework.messaging.SubscribableChannel;
 @EnableBinding({MySink.class})
 public class RocketMqConfig {
     public interface MySink {
-        @Input(Sink.INPUT)
-        SubscribableChannel input();
+//        @Input(Sink.INPUT)
+//        SubscribableChannel input();
 
         @Input("input2")
         SubscribableChannel input2();
 
-        @Input("input3")
-        SubscribableChannel input3();
+//        @Input("input3")
+//        SubscribableChannel input3();
     }
 }

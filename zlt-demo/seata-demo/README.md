@@ -16,7 +16,7 @@ service.vgroupMapping.test_tx_service_group=default
 store.mode=db
 store.db.datasource=druid
 store.db.dbType=mysql
-store.db.url=jdbc:mysql://192.168.28.130:3306/seata?useUnicode=true
+store.db.url=jdbc:mysql://192.168.28.130/seata?useUnicode=true
 store.db.driverClassName=com.mysql.jdbc.Driver
 store.db.user=root
 store.db.password=root

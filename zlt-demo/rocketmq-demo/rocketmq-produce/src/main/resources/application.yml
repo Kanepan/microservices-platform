@@ -9,14 +9,16 @@ spring:
       rocketmq:
         binder:
           # RocketMQ 服务地址
-          name-server: 192.168.28.130:9876
+          name-server: kanepan19.asuscomm.com:9876
         bindings:
           output:
             producer:
               group: produce-group
+              async: true
           output2:
             producer:
               group: test-group2
+              async: true
       bindings:
         output:
           destination: test-topic

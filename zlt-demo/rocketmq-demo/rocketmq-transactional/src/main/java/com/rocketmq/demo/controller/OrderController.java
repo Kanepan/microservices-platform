@@ -55,8 +55,8 @@ public class OrderController {
                 .setHeader("produceError", "1")
                 .build();
         //发送半消息
-        source.output().send(message);
-        return "发送消息失败";
+        boolean flag = source.output().send(message);
+        return "发送消息" + flag;
     }
 
     /**
