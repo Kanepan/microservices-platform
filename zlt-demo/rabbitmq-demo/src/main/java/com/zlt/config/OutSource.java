@@ -5,7 +5,7 @@ import org.springframework.messaging.MessageChannel;
 
 public class OutSource {
     public interface MySource {
-        @Output("order")
+        @Output("output")
         MessageChannel order();
     }
 

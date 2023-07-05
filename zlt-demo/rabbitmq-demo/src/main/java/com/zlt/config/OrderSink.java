@@ -5,7 +5,7 @@ import org.springframework.messaging.SubscribableChannel;
 
 public interface OrderSink {
 
-    String INPUT = "order";
+    String INPUT = "input";
 
     /**
      * @return input channel.

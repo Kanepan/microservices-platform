@@ -13,19 +13,9 @@ spring:
   cloud:
     stream:
       binders:
-        output:
+#        default-binder: rabbit
+        rabbit:
           type: rabbit
-          environment:
-            spring:
-              rabbitmq:
-                host: kanepan19.asuscomm.com
-                port: 15673
-                username: guest
-                password: guest
-                virtual-host: GHost
-        input:
-          type: rabbit
-          defaultCandidate: false
           environment:
             spring:
               rabbitmq:
@@ -34,12 +24,24 @@ spring:
                 username: guest
                 password: guest
                 virtual-host: /
+#        rabbit2:
+#          type: rabbit
+#          defaultCandidate: false
+#          environment:
+#            spring:
+#              rabbitmq:
+#                host: kanepan19.asuscomm.com
+#                port: 15673
+#                username: guest
+#                password: guest
+#                virtual-host: /
       bindings:
         output:
           binder: rabbit
           destination: order
           producer:
             autoStartup: true
+
         input:
           binder: rabbit
           destination: order
