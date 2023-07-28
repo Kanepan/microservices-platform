@@ -26,7 +26,7 @@ public class TestService {
         return send(count);
     }
 
-    private static ExecutorService es = Executors.newFixedThreadPool(120);
+    private static ExecutorService es = Executors.newFixedThreadPool(60);
 
     public BigDecimal send(Long c) {
         long count = 100L;
